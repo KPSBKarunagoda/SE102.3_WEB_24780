@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extract Year of Birth from NIC Number</title>
+  <script>
+  
+  function extractYearOfBirth() {
+    var nicNumber = document.getElementById("nicNumber").value;
+    
+    
+    var yearOfBirth = nicNumber.substr(0, 4);
+    
+    document.getElementById("result").innerHTML = "Year of Birth: " + yearOfBirth;
+  }
+  </script>
+</head>
+<body>
+  <h1>Extract Year of Birth from NIC Number</h1>
+  <input type="text" id="nicNumber" placeholder="Enter NIC Number">
+  <button onclick="extractYearOfBirth()">Extract</button>
+  <p id="result"></p>
+</body>
+</html>
