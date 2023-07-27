@@ -1,0 +1,36 @@
+<body>
+
+    <script>
+        window.onload=function(){
+            getMarks();
+
+        }
+
+        function getMarks(){
+            var total=0;
+            for(var i=0; i<5; i++){
+                var marks=parseInt(window.prompt("Enter marks: "));
+                total += marks;
+            }
+
+            avg = total/5 
+            document.write("Total: "+  total);
+            document.write('<br>');
+            document.write("average: "+ avg);
+            
+            var button= document.createElement("button");
+            button.innerHTML="GRADE";
+            button.onclick = function()
+            {
+                if(avg>30){
+                    window.alert("Congradulations you have passed");
+                }
+                else{
+                    window.alert("sorry you have failed, Better luck next time");
+                }
+            }
+            document.write('<br>');
+            document.body.appendChild(button);
+        }
+</script>
+</body>
